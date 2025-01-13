@@ -1,4 +1,4 @@
-FROM alpine:3.17 AS mirror
+FROM alpine:3.21.2 AS mirror
 
 # update base image
 RUN apk update && apk upgrade -a
@@ -55,7 +55,7 @@ RUN set -e && \
         cp iucode_tool /iucode_tool; \
     fi
 
-FROM alpine:3.17
+FROM alpine:3.21.2
 
 ARG TARGETARCH
 
